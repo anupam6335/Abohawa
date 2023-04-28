@@ -1,7 +1,7 @@
 "use strict";
 
 import { updateWeather, error404 } from "./app.js";
-const defaultLocation = "#/weather?lat=51.5073219&lon=-0.1276474"; // London
+const defaultLocation = "#/weather?lat=22.572645&lon=88.363892"; // Kolkata, West Bengal
 const currentLocation = function () {
     window.navigator.geolocation.getCurrentPosition (res => {
         const { latitude, longitude} = res.coords;
