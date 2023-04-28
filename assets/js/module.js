@@ -24,8 +24,8 @@ export const monthNames = [
   "Dec",
 ];
 
-export const getDate = (dateUnix, timeZone) => {
-  const date = new Date((dateUnix + timeZone) * 1000);
+export const getDate = function (dateUnix, timezone) {
+  const date = new Date((dateUnix + timezone) * 1000);
   const weekDayName = weekDayNames[date.getUTCDay()];
   const monthName = monthNames[date.getUTCMonth()];
 
@@ -36,8 +36,8 @@ export const getDate = (dateUnix, timeZone) => {
 // timezone - timezone shif from UTC in seconds
 // return stirng formate like "Monday 12, Jun"
 
-export const getTime = (timeUnix, timeZone) => {
-  const date = new Date((timeUnix + timeZone) * 1000);
+export const getTime = (timeUnix, timezone) => {
+  const date = new Date((timeUnix + timezone) * 1000);
   const hours = date.getUTCHours();
   const minutes = date.getUTCMinutes();
   const period = hours >= 12 ? "PM" : "AM";
@@ -45,8 +45,8 @@ export const getTime = (timeUnix, timeZone) => {
   return `${hours % 12 || 12}:${minutes} ${period}`;
 };
 
-export const getHours = (timeUnix, timeZone) => {
-  const date = new Date((timeUnix + timeZone) * 1000);
+export const getHours = (timeUnix, timezone) => {
+  const date = new Date((timeUnix + timezone) * 1000);
   const hours = date.getUTCHours();
   const period = hours >= 12 ? "PM" : "AM";
 
