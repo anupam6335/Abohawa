@@ -411,5 +411,5 @@ export const updateWeather = (lat, lon) => {
 
 
 export const error404 = function() { 
-  
+  errorContent.style.display = 'flex';
  }
