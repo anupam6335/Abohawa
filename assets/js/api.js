@@ -3,8 +3,9 @@
 const api_key = 'bb6475727c28652a6f5408d893a32783';
 
 // fetch data from server
-export const fetchData = (URL, callback) => {
-    fetch(`${URL}&appid=${api_key}`).then(res => res.json())
+export const fetchData = function(URL, callback){
+    fetch(`${URL}&appid=${api_key}`)
+    .then(res => res.json())
     .then(data => callback(data));
 }
 
